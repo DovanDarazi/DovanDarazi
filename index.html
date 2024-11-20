@@ -186,15 +186,34 @@
         </nav>
     </header>
 
+
     <!-- Intro Section -->
     <section class="intro">
+        <video id="video-player" autoplay muted playsinline poster="assets/images/Backgrounds/intro.jpg">
+            <img src="assets/images/Backgrounds/intro.jpg" alt="Intro Image">
+        </video>
+        
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <script>
+            const video = document.getElementById('video-player');
+
+            // Check if HLS is supported
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource('https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro.m3u8'); // Your HLS video stream URL
+                hls.attachMedia(video);
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // For Safari (which supports HLS natively)
+                video.src = 'https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro.m3u8'; // HLS stream URL for Safari
+            }
+        </script>
+
         <div class="overlay">
             <p>
-                I am a dedicated researcher with a strong foundation in physics, particularly interested in string theory, astro-particle physics, supersymmetry and general relativity. I hold a BSc from the Lebanese University, where I honed my skills through hands-on experiences in experimental design and data analysis. 
+                I am a dedicated researcher with a strong foundation in physics, particularly interested in string theory, astro-particle physics, supersymmetry, and general relativity. I hold a BSc from the Lebanese University, where I honed my skills through hands-on experiences in experimental design and data analysis.
             </p>
             
             <p>
-                
                 My journey in research began with a data analysis internship at the Lebanese American University, where I contributed to a publication on the impact of Lebanon’s economic and energy crises on water security. Following this, I worked as a research assistant at the American University of Beirut, focusing on the development of a diagnostic device for magnetic confinement nuclear fusion devices, which I am currently authoring a paper on.
             </p>
 
@@ -202,13 +221,6 @@
                 I aim to deepen my expertise in theoretical particle physics and contribute to advancements in the field through innovative research.
             </p>
         </div>
-
-        <!-- Video with image fallback -->
-        <!-- <video src="assets/images/Backgrounds/intro-video.mp4" autoplay muted loop poster="assets/images/Backgrounds/intro.jpg"> -->
-            <!-- Fallback content for browsers that don't support the video tag -->
-            <img src="assets/images/Backgrounds/intro.jpg" alt="Intro Image">
-        <!-- </video> -->
-
     </section>
 
     <!-- Parallax Image -->
