@@ -200,11 +200,11 @@
             // Check if HLS is supported
             if (Hls.isSupported()) {
                 const hls = new Hls();
-                hls.loadSource('https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro.m3u8'); // Your HLS video stream URL
+                hls.loadSource('https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro-video.m3u8'); // Your HLS video stream URL
                 hls.attachMedia(video);
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 // For Safari (which supports HLS natively)
-                video.src = 'https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro.m3u8'; // HLS stream URL for Safari
+                video.src = 'https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro-video.m3u8'; // HLS stream URL for Safari
             }
         </script>
 
