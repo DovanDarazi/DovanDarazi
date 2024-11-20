@@ -189,25 +189,6 @@
 
     <!-- Intro Section -->
     <section class="intro">
-        <video id="video-player" autoplay muted playsinline poster="assets/images/Backgrounds/intro.jpg">
-            <img src="assets/images/Backgrounds/intro.jpg" alt="Intro Image">
-        </video>
-        
-        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-        <script>
-            const video = document.getElementById('video-player');
-
-            // Check if HLS is supported
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource('https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro-video.m3u8'); // Your HLS video stream URL
-                hls.attachMedia(video);
-            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                // For Safari (which supports HLS natively)
-                video.src = 'https://dovandarazi.github.io/assets/images/Backgrounds/intro-video/intro-video.m3u8'; // HLS stream URL for Safari
-            }
-        </script>
-
         <div class="overlay">
             <p>
                 I am a dedicated researcher with a strong foundation in physics, particularly interested in string theory, astro-particle physics, supersymmetry, and general relativity. I hold a BSc from the Lebanese University, where I honed my skills through hands-on experiences in experimental design and data analysis.
@@ -221,6 +202,11 @@
                 I aim to deepen my expertise in theoretical particle physics and contribute to advancements in the field through innovative research.
             </p>
         </div>
+
+        <video autoplay muted loop playsinline>
+            <source src="assets/images/Backgrounds/intro-video.mp4" type="video/mp4">
+            <img src="assets/images/Backgrounds/intro.jpg" alt="Video not supported or loading">
+        </video>
     </section>
 
     <!-- Parallax Image -->
