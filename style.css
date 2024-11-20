@@ -1,0 +1,492 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img {  
+    /* user-drag: none;   */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Sticky Header */
+.sticky-header {
+    background-color: #333;
+    color: #fff;
+    padding: 0.8rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column; /* Stack header items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Optional: add background color for better visibility */
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0.5rem;
+    display: none; /* Hidden by default on larger screens */
+}
+
+.nav-menu {
+    display: flex; /* Keep flexbox for the menu items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    list-style: none; /* Remove bullet points */
+    width: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    justify-content: center; /* Center items horizontally */
+}
+
+.nav-menu li {
+    margin: 0; /* Space between menu items */
+    padding: 1rem 0;
+
+    align-self: flex-end;
+}
+
+.nav-menu a {
+    color: #fff; /* Change to your desired color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+    margin: 0; /* Space between menu items */
+    padding: 0.5rem;
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+.nav-menu a:hover {
+    color: #ddd; /* Change color on hover */
+    margin: 0; /* Space between menu items */
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+}
+
+/* Intro Section */
+.intro {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.intro .overlay {
+    position: absolute;
+    color: #b8b7b7;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.25rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    z-index: 1;
+    width: 60%;
+    font-size: 1.25rem;
+}
+
+.intro video, .intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Parallax Effect */
+.parallax {
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax1 {
+    background-image: url('assets/images/Backgrounds/contact-information.jpg');
+}
+
+.parallax2 {
+    background-image: url('assets/images/Backgrounds/academic-history.jpg');
+}
+
+.parallax3 {
+    background-image: url('assets/images/Backgrounds/professional-experience.jpg');
+}
+
+.parallax4 {
+    background-image: url('assets/images/Backgrounds/qualifications-skills.jpg');
+}
+
+.parallax5 {
+    background-image: url('assets/images/Backgrounds/projects.jpg');
+}
+
+.parallax6 {
+    background-image: url('assets/images/Backgrounds/publications-presentations.jpg');
+}
+
+.parallax7 {
+    background-image: url('assets/images/Backgrounds/professional-associations.jpg');
+}
+
+.parallax8 {
+    background-image: url('assets/images/Backgrounds/extracurriculars.jpg');
+}
+
+.parallax9 {
+    background-image: url('assets/images/Backgrounds/licenses-certifications.jpg');
+}
+
+.parallax10 {
+    background-image: url('assets/images/Backgrounds/final.jpg');
+}
+
+
+
+
+
+
+/* Content Section */
+.content-section {
+    padding: 2.5rem 1.25rem;
+    background-color: #c0c0c0;
+    text-align: center;
+    border-bottom: 0.1rem solid #ccc;
+}
+
+.content-section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Header Navigation Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    list-style: none;
+    padding: 0.6rem 0;
+    margin: 0;
+}
+
+nav ul li {
+    font-size: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 0.25rem;
+}
+
+/* Basic link styling */
+a {
+    color: #333; /* Dark gray to match a grayscale scheme */
+    text-decoration: none; /* Removes underline for a clean look */
+    font-weight: 500; /* Slightly bold */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+    padding: 0.2rem 0.3rem; /* Subtle padding for emphasis */
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #555; /* Lighter gray on hover */
+    background-color: #e0e0e0; /* Light gray background on hover */
+    padding: 0.2rem 0.3rem; /* Subtle padding for emphasis */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Style for links inside .contact-info specifically */
+.contact-info a {
+    color: #444; /* Slightly different gray for contact links */
+    font-weight: bold; /* Emphasize contact links */
+}
+
+.contact-info a:hover {
+    color: #222; /* Darker gray on hover */
+    background-color: #ccc; /* Medium gray on hover */
+}
+
+
+/* education section CSS */
+.content-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.education-entry {
+    flex-basis: 25rem;
+    background-color: #f4f4f4; /* Light gray background */
+    width: 20%;
+    /* min-height: 10em; */
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.education-entry ul {
+    list-style-type: none;
+}
+
+/* image sizing */
+img{
+    width: 50%;
+}
+
+
+/* Style the tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hide tooltip text initially */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 20rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -125%; /* Position above the link */
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Fade in animation */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the hamburger menu on smaller screens */
+    }
+
+
+    .nav-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center items horizontally */
+        display: none; /* Hide the menu links by default */
+    }
+
+    /* Show the menu when open class is added */
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0; /* Space between stacked menu items */
+        padding: 0;
+        width: 100%; /* Make each menu item take the full width */
+        text-align: center; /* Center text in each item */
+    }
+
+    .nav-menu a {
+        display: block; /* Make each link take the full width */
+        width: 100%; /* Ensure the link takes full width */
+    }
+
+    .intro .overlay {
+        width: 90%;
+    }
+    
+    .nav-menu a {
+        padding: 1rem 5rem;
+        margin: 0;
+    }
+
+    .nav-menu a:hover {
+        padding: 1rem 5rem;
+        margin: 0;
+    }
+
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    min-height: 14rem;  /* Increased to accommodate contact info */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items to the left */
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Adds space between items */
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align left */
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #555;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;  /* Space between icon and text */
+}
+
+/* Download Section */
+.download-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.download-link {
+    display: flex;
+    align-items: center;
+    color: #fff;  /* White text */
+    background-color: #555;  /* Subtle dark background for the button */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #fff;  /* White hover color */
+    color: #555;  /* Keep text dark on hover */
+    padding: 0.5rem 1rem;
+}
+
+/* Download Icon */
+.si-download {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* Rights Reserved */
+.rights-reserved {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.875rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+
+/* scrollbars */
+/* Ensuring the scrollbar width is set correctly */
+html::-webkit-scrollbar {
+    width: 16px;  /* Wider scrollbar */
+    height: 16px; /* For horizontal scrollbar */
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #555;  /* Color of the thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #222; /* Background color of the track */
+}
+
+/* Change thumb color on hover */
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Thumb color on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;  /* Thin scrollbar for Firefox */
+    scrollbar-color: #555 #222;  /* Thumb and track color for Firefox */
+}
+
