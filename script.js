@@ -1,9 +1,18 @@
 // script.js
 
+
 // Scroll to Top on Page Load
+// window.addEventListener('load', function () {
+//     window.scrollTo(0, 0);
+// });
+
+// Scroll to Top on Page Load (only if not a refresh)
 window.addEventListener('load', function () {
-    window.scrollTo(0, 0);
+    if (!performance.navigation || performance.navigation.type !== performance.navigation.TYPE_RELOAD) {
+        window.scrollTo(0, 0);
+    }
 });
+
 
 // Smooth scroll with offset for header links
 document.querySelectorAll('nav a').forEach(anchor => {

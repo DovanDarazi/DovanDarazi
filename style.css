@@ -71,6 +71,10 @@ body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     justify-content: center; /* Center items horizontally */
+
+    height: 4.5rem;
+    max-height: 4.5rem;
+    overflow-y: auto;
 }
 
 .nav-menu li {
@@ -95,6 +99,8 @@ body {
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
 }
+
+
 
 /* Intro Section */
 .intro {
@@ -179,9 +185,6 @@ body {
 .parallax10 {
     background-image: url('assets/images/Backgrounds/final.jpg');
 }
-
-
-
 
 
 
@@ -316,67 +319,6 @@ img{
 }
 
 
-
-
-
-
-
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-
-
-/* Media query for small screens */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show the hamburger menu on smaller screens */
-    }
-
-
-    .nav-menu {
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: center; /* Center items horizontally */
-        display: none; /* Hide the menu links by default */
-    }
-
-    /* Show the menu when open class is added */
-    .nav-menu.open {
-        display: flex;
-    }
-
-    .nav-menu li {
-        margin: 0; /* Space between stacked menu items */
-        padding: 0;
-        width: 100%; /* Make each menu item take the full width */
-        text-align: center; /* Center text in each item */
-    }
-
-    .nav-menu a {
-        display: block; /* Make each link take the full width */
-        width: 100%; /* Ensure the link takes full width */
-    }
-
-    .intro .overlay {
-        width: 90%;
-    }
-    
-    .nav-menu a {
-        padding: 1rem 5rem;
-        margin: 0;
-    }
-
-    .nav-menu a:hover {
-        padding: 1rem 5rem;
-        margin: 0;
-    }
-
-}
-
-
 /* Footer */
 footer {
     background-color: #333;
@@ -394,6 +336,7 @@ footer {
     flex-wrap: wrap;
     gap: 1.5rem; /* Adds space between items */
 }
+
 
 /* Contact Info */
 .contact-info {
@@ -488,5 +431,84 @@ html::-webkit-scrollbar-thumb:hover {
 * {
     scrollbar-width: thin;  /* Thin scrollbar for Firefox */
     scrollbar-color: #555 #222;  /* Thumb and track color for Firefox */
+}
+
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .sticky-header{
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger menu on smaller screens */
+    }
+
+    .nav-menu {
+        text-emphasis-position: inherit;
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center items horizontally */
+        display: none; /* Hide the menu links by default */
+
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    /* Show the menu when open class is added */
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0; /* Space between stacked menu items */
+        padding: 0;
+        width: 100%; /* Make each menu item take the full width */
+        text-align: center; /* Center text in each item */
+    }
+
+    .nav-menu a {
+        display: block; /* Make each link take the full width */
+        width: 100%; /* Ensure the link takes full width */
+    }
+
+    .intro {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .intro .overlay {
+        width: 90%;
+        position: inherit;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .nav-menu a {
+        padding: 1rem 5rem;
+        margin: 0;
+    }
+
+    .nav-menu a:hover {
+        padding: 1rem 5rem;
+        margin: 0;
+    }
+
+    .download-section{
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    
 }
 
